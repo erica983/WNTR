@@ -523,7 +523,7 @@ class WaterNetworkModel(AbstractModel):
         """
         self._pattern_reg.add_pattern(name, pattern)
             
-    def add_curve(self, name, curve_type, xy_tuples_list):
+    def add_curve(self, name, curve_type, tuple_coefficient):
         """
         Adds a curve to the water network model
 
@@ -536,7 +536,7 @@ class WaterNetworkModel(AbstractModel):
         xy_tuples_list : list of (x, y) tuples
             List of X-Y coordinate tuples on the curve.
         """
-        self._curve_reg.add_curve(name, curve_type, xy_tuples_list)
+        self._curve_reg.add_curve(name, curve_type, tuple_coefficient)
         
     def add_source(self, name, node_name, source_type, quality, pattern=None):
         """
